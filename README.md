@@ -4,9 +4,9 @@ Get screenshot of given website for given country using VPN. Supports NordVPN.
 ## How to use
 #### 1. Open (localhost:56777)[http://localhost:56777] in your browser.
 #### 2. Enter URL and select a country
-![Website before request](https://raw.githubusercontent.com/ulaszewskim/screenworld/main/_images/before.PNG)
+![Website before request](https://raw.githubusercontent.com/ulaszewskim/ScreenWorld/main/_images/before.png)
 #### 3. Click **Submit** and wait for screenshot
-![Website after request](https://raw.githubusercontent.com/ulaszewskim/screenworld/main/_images/after.PNG)
+![Website after request](https://raw.githubusercontent.com/ulaszewskim/ScreenWorld/main/_images/after.png)
 
 ## Requirement
 #### 1. [NordVPN account](https://nordvpn.com/)
@@ -57,4 +57,4 @@ python3 app.py
 ```
 
 ## TODO
-[ ] Finish Docker container support
+- [ ] Finish Docker container support
