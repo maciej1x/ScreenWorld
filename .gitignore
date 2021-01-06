@@ -1,0 +1,7 @@
+Dockerfile_login
+firefox/
+geckodriver
+*.log
+screenshots
+.spyproject/
+__pycache__

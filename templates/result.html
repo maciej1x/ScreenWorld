@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ScreenWorld output</title>
+        <style>
+            body {
+            font-family: sans-serif, Arial, Helvetica;
+            background-color: #202021;
+            }
+            h3 {
+            color: white;
+            }
+            .center {
+            margin: auto;
+            max-width: 1400px;
+            border: 5px solid #878787;
+            border-radius: 1%;
+            box-sizing: border-box;
+            padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <h3>Requested url: {{ url }}</h3>
+            <h3>Country: {{ country }}</h3>
+            <h3>Time elapsed: {{ time_elapsed }} seconds</h3>
+            <center><img src="{{ screenshot_name }}" /></center>
+        </div>
+    </body>
+</html>
+

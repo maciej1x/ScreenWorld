@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ScreenWorld</title>
+        <style>
+            body {
+            font-family: sans-serif, Arial, Helvetica;
+            background-color: #202021;
+            }
+            h3 {
+            color: white;
+            font-size: 30px;
+            }
+            p {
+            color: white;
+            }
+            input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            }
+            input[type=submit] {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+            input[type=submit]:hover {
+            background-color: #45a049;
+            }
+            .container {
+            border-radius: 5px;
+            background-color: grey;
+            padding: 20px;
+            }
+            .credits {
+            color: grey
+            }
+            .loadcircle {
+            margin: auto;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #4caf50;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            position: relative;
+            visibility: hidden;
+            }
+            .loadtext {
+            color: white;
+            margin: auto;
+            position: relative;
+            padding: 20px 20px;
+            visibility: hidden;
+            }
+            .center {
+            margin: auto;
+            max-width: 900px;
+            border: 5px solid #878787;
+            border-radius: 2%;
+            box-sizing: border-box;
+            padding: 10px;
+            }
+            @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+            }
+        </style>
+        <script type="text/javascript">
+            function showloading()
+            {
+            document.getElementById("loadcircle").style.visibility="visible";
+            document.getElementById("loadtext").style.visibility="visible";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="center">
+            <h3>
+                <center>ScreenWorld</center>
+            </h3>
+            <div class="container">
+                <form action="{{ url_for('getscreenshot') }}" method="post">
+                    <label for="url">URL:</label>
+                    <input type="text" id="url" name="url" placeholder="Website..">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="{{ countries[0] }}" selected>{{ countries[0] }}</option>
+                        {% for country in countries[1:] %}
+                        <option value="{{ country }}">{{ country }}</option>
+                        "
+                        {% endfor %}
+                    </select>
+                    <input type="submit" value="Submit" onclick="showloading();">
+                </form>
+            </div>
+            <p>VPN status: {{ vpn_status }}</p>
+            <p>Current country: {{ vpn_country }}</p>
+            <p>Current IP: {{ vpn_ip }}</p>
+            <div class="loadcircle" id="loadcircle"></div>
+            <div class="loadtext" id="loadtext">
+                <center>Loading...</center>
+            </div>
+            <div class="credits">
+                <center>Author: Maciej Ulaszewski</center>
+            </div>
+            <div class="credits">
+                <center><a href="https://github.com/ulaszewskim/">GitHub</a></center>
+            </div>
+        </div>
+    </body>
+</html>
+

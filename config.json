@@ -1,0 +1,5 @@
+{
+    "firefox_path": "./firefox/firefox",
+    "geckodriver_path": "./geckodriver",
+    "screenshots_path": "screenshots"
+}
