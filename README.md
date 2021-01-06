@@ -2,7 +2,7 @@
 Get screenshot of given website for given country using VPN. Supports NordVPN.
 
 ## How to use
-#### 1. Open (localhost:56777)[http://localhost:56777] in your browser.
+#### 1. Open [localhost:56777](http://localhost:56777) in your browser.
 #### 2. Enter URL and select a country
 ![Website before request](https://raw.githubusercontent.com/ulaszewskim/ScreenWorld/main/_images/before.png)
 #### 3. Click **Submit** and wait for screenshot
